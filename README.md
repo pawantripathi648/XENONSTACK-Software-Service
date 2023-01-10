@@ -1,27 +1,22 @@
-# SoftwareService
+# Software Services
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+To run the project do the following
 
-## Development server
+1. Clone the project from GIT using Git CLI
+2. cd project
+3. cd Software-Service
+4. cd backend
+5. ./pocketbase serve
+6. cd ..
+7. npm i
+8. npm run start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Notes -
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Pocketbase will run on http://127.0.0.1:8090
+2. To open admin open the port http://127.0.0.1:8090/_/
+3. The username and password for the this is 'pawantripathi648@gmail.com' and '0123456789' respectively
+4. The website will be running on http://127.0.0.1:4200
+5. LOGIN is present at top right corner of Header
+6. LOGIN username and password for http://127.0.0.1:4200 is 'pawan' and '12345678' respectively
+7. The entries from Contact Us form can be seen on http://127.0.0.1:8090/_/ under collections -> contact_us
