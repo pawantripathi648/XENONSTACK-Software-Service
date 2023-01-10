@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,10 +8,10 @@ import { ApiService } from '../api.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  form: UntypedFormGroup = new UntypedFormGroup({
-    name: new UntypedFormControl('', [Validators.required]),
-    email: new UntypedFormControl('', [Validators.required]),
-    message: new UntypedFormControl('', [
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    message: new FormControl('', [
       Validators.required,
       Validators.minLength(10),
     ]),
@@ -24,7 +24,10 @@ export class ContactComponent implements OnInit {
   submit(): void {
     if (this.form.valid) {
       this.apiService.submitContact(this.form.value).then((res) => {
-        console.log(res);
+        if (res) {
+          this.form.reset();
+          alert('Query Saved Successfully');
+        }
       });
     }
   }

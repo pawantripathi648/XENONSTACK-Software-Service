@@ -12,4 +12,16 @@ export class ApiService {
   async submitContact(data: any): Promise<any> {
     return await this.pb.collection('contact_us').create(data);
   }
+
+  async login(username: string, password: string): Promise<any> {
+    return await this.pb
+      .collection('users')
+      .authWithPassword(username, password);
+  }
+
+  async getContacts(): Promise<any> {
+    return await this.pb.collection('contact_us').getFullList(200, {
+      sort: '-created',
+    });
+  }
 }

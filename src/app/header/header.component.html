@@ -16,9 +16,13 @@
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
         <li class="nav-item"><a class="nav-link active" routerLink="/teams">Team</a></li>
-        <li class="nav-item"><a class="nav-link active" routerLink="/contact">Contacts</a></li>
+        <li class="nav-item"><a class="nav-link active" routerLink="/contact">Contact Us</a></li>
         <li class="nav-item"></li>
-      </ul><a class="btn btn-primary shadow" role="button" routerLink="/login">LOGIN</a>
+      </ul>
+      <a class="btn btn-primary shadow" role="button" routerLink="/login" *ngIf="!user">LOGIN</a>
+      <a class="btn btn-sm btn-primary shadow me-2" role="button" href="/" *ngIf="user" (click)="logout()">LOGOUT</a>
+      <a *ngIf="user" routerLink="/dashboard"><img height="30px" width="30px" class="rounded-circle"
+          [src]="'http://127.0.0.1:8090/api/files/_pb_users_auth_/'+user.record.id+'/'+user.record.avatar"></a>
     </div>
   </div>
 </nav>
