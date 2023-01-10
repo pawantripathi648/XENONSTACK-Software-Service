@@ -20,3 +20,4 @@ Notes -
 5. LOGIN is present at top right corner of Header
 6. LOGIN username and password for http://127.0.0.1:4200 is 'pawan' and '12345678' respectively
 7. The entries from Contact Us form can be seen on http://127.0.0.1:8090/_/ under collections -> contact_us
+8. Min Length for message to be submitted in contact us form is 10 characters.
