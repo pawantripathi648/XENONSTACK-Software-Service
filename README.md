@@ -7,7 +7,7 @@ To run the project do the following
 3. cd Software-Service
 4. cd backend
 5. ./pocketbase serve
-6. cd ..
+6. open new terminal and go to cd project/Software-Service
 7. npm i
 8. npm run start
 
